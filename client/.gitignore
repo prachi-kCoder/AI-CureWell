@@ -13,6 +13,7 @@ dist-ssr
 *.local
 
 # Ignore the environment variable file
+build/
 .env
 
 # Editor directories and files
