@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual Environments
+venv/
+wellenv/
+env/
+.env/
+
+# Distribution / Packaging
+build/
+dist/
+*.egg-info/
+
+# Logs
+*.log
+
+# Other files
+*.sqlite3
+*.db
+*.pyc
+*.pdb
+
+# IDE specific files
+.idea/
+.vscode/
+*.suo
+*.sln
+*.ntvs*
+*.njsproj
+
+# MacOS files
+.DS_Store
+
+# Windows files
+Thumbs.db
