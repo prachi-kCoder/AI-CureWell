@@ -8,8 +8,8 @@ Unleash your health potential with our app! Enter your symptoms for smart diseas
 ![Booking and Nearby(Hospital)](https://github.com/user-attachments/assets/f9b1873e-7c59-4606-99ce-a273b553e222)
 
 
-## Setup Instructions
-### Client (React-Vite) Setup
+##  Setup Instructions
+###  Client (React-Vite) Setup
 Clone the repository:
 
   (bash)
@@ -26,7 +26,7 @@ Clone the repository:
   Start the development server:
   npm run dev
   
-###Server (FastAPI) Setup
+### Server (FastAPI) Setup
   Navigate to the server directory:
   cd <repository-name>/server
   Set up a virtual environment:
@@ -49,10 +49,10 @@ Run the FastAPI server:
 Getting an API Key
   To use location services, you will need to obtain an API key from TomTom:
 
-### Go to the TomTom Developer Portal.
+###  Go to the TomTom Developer Portal.
 1)Sign up or log in to your account.
 2)Create a new project and navigate to the "API Keys" section.
 3)Copy your API key and paste it into your .env file as described above.
 
-### Contributing
+###  Contributing
 Contributions are welcome! Please fork the repository and submit a pull request with your changes.
