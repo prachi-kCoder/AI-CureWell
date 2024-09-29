@@ -6,6 +6,7 @@ import axios from 'axios';
 import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
 import '../../styles/ViewPublication.css'; // Add custom CSS for additional styling
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
 
 const ViewPublication = ({ publicationId }) => {
   const { id } = useParams();
@@ -37,7 +38,7 @@ const ViewPublication = ({ publicationId }) => {
         return;
       }
       try {
-        const response = await axios.get(`http://localhost:8000/api/publications/${id}`);
+        const response = await axios.get(`${API_BASE_URL}/api/publications/${id}`);
         setPublication(response.data);
       } catch (err) {
         setError(err);

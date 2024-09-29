@@ -3,6 +3,7 @@ import { Container, Typography, TextField, Button, Card, CardContent, Grid, Box 
 import axios from 'axios';
 import '../../styles/LatestAdvances.css';  // Import the custom CSS file
 import { Link } from 'react-router-dom'; 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
 
 const LatestAdvances = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -18,7 +19,7 @@ const LatestAdvances = () => {
   const fetchAdvances = async () => {
     setLoading(true);
     try {
-      const response = await axios.get(`http://localhost:8000/api/latest-advances`, {
+      const response = await axios.get(`${API_BASE_URL}/api/latest-advances`, {
         params: { condition: searchTerm },
       });
       console.log(response);

@@ -12,6 +12,7 @@ import {
   ListItemText 
 } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000'; ;
 
 const ChatBot = () => {
   const [messages, setMessages] = useState([
@@ -40,7 +41,7 @@ const ChatBot = () => {
     try {
       const token = localStorage.getItem('access_token'); // Adjust based on your auth implementation
 
-      const response = await fetch('http://localhost:8000/chat/', {
+      const response = await fetch(`${API_BASE_URL}/chat/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -109,7 +110,7 @@ const ChatBot = () => {
                   sx={{ 
                     padding: 1.5, 
                     maxWidth: '80%', 
-                    backgroundColor: msg.sender === 'user' ? '#1976d2' : '#e0e0e0',
+                    backgroundColor: msg.sender === 'user' ? '#FB9792' : '#e0e0e0',
                     color: msg.sender === 'user' ? '#fff' : '#000',
                   }}
                 >
