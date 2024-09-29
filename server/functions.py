@@ -2,6 +2,8 @@ import pickle
 import numpy as np
 import pandas as pd
 import ast
+from typing import List, Dict 
+import requests
 # Load the trained model
 with open("models/SVC.pkl", "rb") as file:
     svc = pickle.load(file)
@@ -11,7 +13,7 @@ diseases_list = {15: 'Fungal infection', 4: 'Allergy', 16: 'GERD', 9: 'Chronic c
 
 
 # Load the disease descriptions
-description = pd.read_csv('Data/description.csv')
+description = pd.read_csv('Data/description.csv',encoding='ISO-8859-1')
 precautions = pd.read_csv("Data/precautions_df.csv")
 instructions = pd.read_csv("Data/Health_Instructions.csv")
 medications = pd.read_csv('Data/medications.csv')
@@ -60,23 +62,32 @@ def cure_patient(disease):
     return pre, med, die, instruc
 
 
+# from typing import List, Dict
+
+def fetch_latest_advances(condition: str) -> List[Dict]:
+    # Mock data
+    mock_data = [
+        {
+            "id": 1,
+            "title": "New Treatment for Condition A",
+            "journal": "Medical Journal A",
+            "publishedDate": "2023-08-15",
+            "url": "https://example.com/publication1"
+        },
+        {
+            "id": 2,
+            "title": "Innovative Approaches for Condition B",
+            "journal": "Research Journal B",
+            "publishedDate": "2023-07-10",
+            "url": "https://example.com/publication2"
+        },
+        # More mock data as needed...
+    ]
+    
+    # Currently, no filtering based on condition
+    return mock_data
 
 
 
 
-
-# def cure_patient(disease):
-#     pre = precautions[precautions['Disease'] == disease][['Precaution_1', 'Precaution_2', 'Precaution_3', 'Precaution_4']]
-#     pre = [col for col in pre.values]
-
-#     med = medications[medications['Disease'] == disease]['Medication']
-#     med = [med for med in med.values]
-
-#     die = diets[diets['Disease'] ==disease]['Diet']
-#     die = [die for die in die.values]
-
-#     instruct = instruct[instruct['Disease'] == disease] ['Instructions']
-
-
-#     return pre,med,die,instruct
 

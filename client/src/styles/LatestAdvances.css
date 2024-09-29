@@ -1,0 +1,36 @@
+/* LatestAdvances.css */
+
+.advance-card {
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    z-index: 1;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .advance-card:hover {
+    transform: scale(1.05);
+    z-index: 2;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-grid-item {
+    position: relative;
+    transition: z-index 0.3s;
+  }
+  
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .research-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .research-icon:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+  }
+  

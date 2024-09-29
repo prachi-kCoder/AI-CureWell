@@ -1,0 +1,59 @@
+.publication-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section {
+    margin: 30px 0;
+  }
+  
+  .section-title {
+    margin-bottom: 10px;
+    color: #2f113b;
+    border-bottom: 2px solid #f83d5f;
+    padding-bottom: 5px;
+  }
+  
+  .results-card {
+    padding: 15px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .results-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .back-button {
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.7s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }

@@ -5,10 +5,14 @@ import { useTheme } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import SearchIcon from '@mui/icons-material/Search';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const theme = useTheme(); // Access the current theme
-
+  const navigate = useNavigate(); 
+  const handleAccountClick = () => {
+    navigate('/dashboard'); // Programmatically navigate to Dashboard
+  };
   return (
     <AppBar
       position="static"
@@ -73,9 +77,32 @@ const Header = () => {
             />
           </Box>
 
-          <IconButton color="inherit" sx={{ ml: 2 }}>
+          {/* <IconButton color="inherit" sx={{ ml: 2 } }>
+            <AccountCircle />
+          </IconButton> */}
+          <IconButton color="inherit" sx={{ ml: 2 }} onClick={handleAccountClick}>
             <AccountCircle />
           </IconButton>
+          <Button
+            type="submit"
+            fullWidth
+            variant="contained"
+            onClick={() => navigate('/login')}
+            sx={{
+              background: 'linear-gradient(45deg, #8e44ad 30%, #ff6b6b 90%)', // Dark violet to light red
+              py: 1,
+              fontSize: '0.7rem',
+              fontWeight: 'bold',
+              color: '#fff', // Ensuring text color is white for better contrast
+              borderRadius: '25px',
+              '&:hover': {
+                background: 'linear-gradient(45deg, #732d91 30%, #e74c3c 90%)', // Darker shades for hover effect
+              },
+              transition: 'background 0.3s ease-in-out', // Smooth transition
+            }}
+          >
+            Log In
+          </Button>
         </Box>
       </Toolbar>
     </AppBar>

@@ -47,14 +47,6 @@ const SymptomChecker = () => {
                 Check Symptoms
             </Button>
 
-            {/* {result && (
-                <Box mt={3}>
-                    <Typography variant="h6">Predicted Disease:</Typography>
-                    <Typography>{result.disease}</Typography>
-                    <Typography variant="h6">Description:</Typography>
-                    <Typography>{result.description}</Typography>
-                </Box>
-            )} */}
             {result && (
                 <Card variant="outlined" sx={{ mt: 3, p: 2, bgcolor: '#f9f9f9', borderRadius: '8px' }}>
                     <CardContent>
