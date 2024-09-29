@@ -1,7 +1,7 @@
 # AI-CureWell
 Unleash your health potential with our app! Enter your symptoms for smart disease predictions using advanced machine learning. Get tailored advice, precautions, and medications, plus easily find nearby hospitals and book appointments. Your health journey starts now!
 
-
+![image](https://github.com/user-attachments/assets/b827cb3a-0093-4f8e-9f1f-b3841c142a14)
 ![SymtomCheck](https://github.com/user-attachments/assets/ac9038d9-3489-4e16-b56e-fdc3ee82acc6)
 ![DiseaseCure](https://github.com/user-attachments/assets/eafa78ff-83f0-4a5c-b5da-066b89158135)
 ![Mapping](https://github.com/user-attachments/assets/fab333ae-516a-4cfc-8051-3f5ea5d81e19)
