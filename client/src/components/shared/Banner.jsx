@@ -36,7 +36,7 @@ const Banner = () => {
       <Overlay />
       <BannerContent>
         <Typography variant="h4" gutterBottom>
-          When your health gets complicated, we help you find better care, faster.
+            When health's a fight, we lead you to what's right !
         </Typography>
         
       </BannerContent>
