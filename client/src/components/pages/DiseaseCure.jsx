@@ -84,6 +84,7 @@ const DiseaseCure = () => {
 
   const handleFetchData = async () => {
     if (disease) {
+      console.log(API_BASE_URL);
       const response = await fetch(`${API_BASE_URL}/cure/${disease}`);
       const result = await response.json();
       setData(result);
