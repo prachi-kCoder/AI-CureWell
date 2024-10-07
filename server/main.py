@@ -19,9 +19,9 @@ app = FastAPI()
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    # allow_origins=["http://localhost:5173",
-    #                "https://ai-curewell-clientside.onrender.com"], 
-    allow_origins=["*"],
+    allow_origins=["http://localhost:5173",
+                   "https://ai-curewell-clientside.onrender.com"], 
+    # allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],  # Allow all methods like POST, GET, etc.
     allow_headers=["*"],  # Allow all headers, including Content-Type
@@ -60,6 +60,11 @@ class ChatRequest(BaseModel):
 
 class ChatResponse(BaseModel):
     response: str
+
+# Root route
+@app.get("/")
+async def root():
+    return {"message": "Welcome to FastApi CureWell Backend !!"}
 
 @app.post("/symptom-check/", response_model=SymptomCheckResponse)
 async def symptom_check(request: SymptomCheckRequest):
