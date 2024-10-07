@@ -18,11 +18,14 @@ import DashboardSummary from "./components/Dashboard/DashboardSummary.jsx";
 import Dashboard from "./components/Dashboard/Dashboard.jsx"
 import SignUp from "./components/SignUp.jsx";
 import Login from "./components/Login.jsx";
+import { Box } from '@mui/material'; // Import MUI Box for Flexbox layout
 
 function App() {
   return (
+    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
     <Router>
       <Header /> {/* Common across all routes */}
+      <Box sx={{ flexGrow: 1 }}>
       <Routes>
         {/* Define your routes here */}
         <Route
@@ -53,9 +56,10 @@ function App() {
         <Route path="/login" element={<Login />} /> 
 
       </Routes>
-          
+      </Box>    
       <Footer /> {/* Footer appears on all routes */}
     </Router>
+    </Box>
   );
 }
 

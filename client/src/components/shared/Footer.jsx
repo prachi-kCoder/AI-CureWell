@@ -13,7 +13,7 @@ const Footer = () => {
         position: 'relative',
         bottom: 0,
         width: '100%',
-        marginTop: 'auto',
+        marginTop: 'auto', 
         boxShadow: '0 -2px 5px rgba(0, 0, 0, 0.1)',
         transition: 'background-color 0.3s ease-in-out', // Smooth background color transition
       }}
