@@ -19,8 +19,7 @@ app = FastAPI()
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173",
-                   "https://ai-curewell-clientside.onrender.com"], 
+    allow_origins=["https://ai-curewell-clientside.onrender.com","http://localhost:5173"], 
     # allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],  # Allow all methods like POST, GET, etc.
