@@ -8,9 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from data import advances_data, detailed_advances_data
  
-# from models import Advance
-# from database import get_db
-# from sqlalchemy.orm import Session
+
 
 # for chatFeature
 import cohere
