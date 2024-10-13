@@ -62,30 +62,7 @@ def cure_patient(disease):
     return pre, med, die, instruc
 
 
-# from typing import List, Dict
 
-def fetch_latest_advances(condition: str) -> List[Dict]:
-    # Mock data
-    mock_data = [
-        {
-            "id": 1,
-            "title": "New Treatment for Condition A",
-            "journal": "Medical Journal A",
-            "publishedDate": "2023-08-15",
-            "url": "https://example.com/publication1"
-        },
-        {
-            "id": 2,
-            "title": "Innovative Approaches for Condition B",
-            "journal": "Research Journal B",
-            "publishedDate": "2023-07-10",
-            "url": "https://example.com/publication2"
-        },
-        # More mock data as needed...
-    ]
-    
-    # Currently, no filtering based on condition
-    return mock_data
 
 
 

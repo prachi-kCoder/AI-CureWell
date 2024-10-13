@@ -1,11 +1,14 @@
 from typing import List
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException, Query, Depends
 from pydantic import BaseModel
 from fastapi.responses import JSONResponse
-from functions import fetch_latest_advances, get_predicted_value, get_description, cure_patient
+from functions import  get_predicted_value, get_description, cure_patient
 
 from fastapi.middleware.cors import CORSMiddleware
 from data import advances_data, detailed_advances_data 
+from models import Advance
+from database import get_db
+from sqlalchemy.orm import Session
 # for chatFeature
 import cohere
 from dotenv import load_dotenv
@@ -112,6 +115,14 @@ async def get_latest_advances(condition: str = Query(..., description="Medical c
     # Return the filtered list or an empty list if no match found
     return JSONResponse(content=filtered_advances)
 
+# @app.get("/api/Latest-advances", response_model=List[Advance])
+# async def get_latest_advances(condition: str = Query(..., description="Medical condition"), db: Session = Depends(get_db)):
+#     # Query the database for advances that match the condition
+#     filtered_advances = db.query(Advance).filter(Advance.condition.ilike(f"%{condition}%")).all()
+    
+#     # Return the filtered list or an empty list if no match found
+#     return filtered_advances
+
 
 
 # Route to get detailed information about a specific publication by ID
@@ -155,6 +166,7 @@ async def chatbot_response(chat_request: ChatRequest):
             raise HTTPException(status_code=500, detail="No response from Cohere API")
         
         assistant_reply = response.generations[0].text.strip()
+        
         
         return ChatResponse(response=assistant_reply)
     
